@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var winLabel: UILabel!
     
     @IBOutlet weak var leftImageCard: UIImageView!
     
@@ -40,8 +41,11 @@ class ViewController: UIViewController {
         
         //Short way
         
-        let leftPlayerRoll = arc4random_uniform(14)+2
-        let rightPlayerRoll = arc4random_uniform(14)+2
+        winLabel.text = ("")
+        winLabel.center = CGPoint(x: winLabel.center.x - 500, y: winLabel.center.y)
+        
+        let leftPlayerRoll = arc4random_uniform(13)+2
+        let rightPlayerRoll = arc4random_uniform(13)+2
         print(leftPlayerRoll)
         print(rightPlayerRoll)
         
@@ -53,11 +57,30 @@ class ViewController: UIViewController {
             
             leftScore += 1
             leftPlayerScore.text = String(leftScore)
+            winLabel.text = String("Left Player Won")
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                
+                self.winLabel.center = CGPoint(x: self.winLabel.center.x + 500, y: self.winLabel.center.y)
+                
+            })
             
         } else if rightPlayerRoll > leftPlayerRoll {
             
             rightScore += 1
             rightPlayerScore.text = String(rightScore)
+            winLabel.text = String("Right Player Won")
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                
+                self.winLabel.center = CGPoint(x: self.winLabel.center.x + 500, y: self.winLabel.center.y)
+                
+            })
+            
+            
+        } else if rightPlayerRoll == leftPlayerRoll {
+            
+            winLabel.text = String("It's a draw!")
             
         }
         

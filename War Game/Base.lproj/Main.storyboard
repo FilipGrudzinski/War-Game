@@ -87,9 +87,17 @@
                                 </subviews>
                                 <variation key="heightClass=compact" distribution="fill"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iem-kV-n9e">
+                                <rect key="frame" x="20" y="368.33333333333331" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="43"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iem-kV-n9e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5zk-zf-tL3"/>
+                            <constraint firstItem="iem-kV-n9e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7I7-Ne-zAg"/>
                             <constraint firstAttribute="bottom" secondItem="3zd-70-r3U" secondAttribute="bottom" id="F40-hS-Zmg"/>
                             <constraint firstItem="3zd-70-r3U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ke2-dA-f36"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VWf-dd-rxB" secondAttribute="bottom" constant="20" id="MXu-DP-zPo"/>
@@ -98,6 +106,7 @@
                             <constraint firstItem="VWf-dd-rxB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fWP-PQ-qAs"/>
                             <constraint firstItem="3zd-70-r3U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="guu-BL-mwu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VWf-dd-rxB" secondAttribute="trailing" constant="20" id="t2X-Tc-W3Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iem-kV-n9e" secondAttribute="trailing" constant="20" id="xQG-MG-gg4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -106,10 +115,12 @@
                         <outlet property="leftPlayerScore" destination="6qc-nC-xJd" id="L5b-Eu-wxn"/>
                         <outlet property="rightImageCard" destination="80w-Ht-Ak4" id="vvg-mR-nN5"/>
                         <outlet property="rightPlayerScore" destination="VlL-Km-pfo" id="Efx-3h-jlA"/>
+                        <outlet property="winLabel" destination="iem-kV-n9e" id="B3b-iS-aUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="33.423913043478265"/>
         </scene>
     </scenes>
     <resources>
